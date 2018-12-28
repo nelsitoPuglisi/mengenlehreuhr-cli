@@ -1,0 +1,11 @@
+{
+  "name": "mengenlehreuhr-cli",
+  "version": "1.0.0",
+  "description": "A Mengenlehreuhr clock for the terminal",
+  "main": "mengenlehreuhr.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "",
+  "license": "ISC"
+}
