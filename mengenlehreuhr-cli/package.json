@@ -3,15 +3,17 @@
   "version": "1.0.0",
   "description": "A Mengenlehreuhr clock for the terminal",
   "main": "mengenlehreuhr.js",
-  "bin" : {
-    "mengenlehreuhr":"mengenlehreuhr.js"
+  "bin": {
+    "mengenlehreuhr": "mengenlehreuhr.js"
   },
   "scripts": {
-    "test": "test"
+    "test": "mocha"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "eslint": "^5.11.1"
+    "chai": "^4.2.0",
+    "eslint": "^5.11.1",
+    "mocha": "^5.2.0"
   }
 }
