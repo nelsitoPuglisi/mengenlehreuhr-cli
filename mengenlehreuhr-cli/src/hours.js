@@ -1,28 +1,29 @@
 class Hours {
   constructor(ticks) {
+    var mod = (ticks / 3600) % 5
     this.first = "disabled"
-    if(ticks >= 3599) {
+    if(mod >= 1) {
       this.first = "enabled"
     }
 
     this.second = "disabled"
-    if(ticks >= 3599 * 2) {
+    if(mod >= 2) {
       this.second = "enabled"
     }
 
     this.third = "disabled"
-    if(ticks >= 3599 * 3) {
+    if(mod >= 3) {
       this.third = "enabled"
     }
 
     this.fourth = "disabled"
-    if(ticks >= 3599 * 4) {
+    if(mod >= 4) {
       this.fourth = "enabled"
     }
   }
 
   asJson() {
-    return [this.first, this.second, "disabled", "disabled"]
+    return [this.first, this.second, this.third, this.fourth]
   }
 };
 

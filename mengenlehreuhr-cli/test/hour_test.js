@@ -5,7 +5,7 @@ const Hours = require('../src/hours.js');
 describe("Hours Unit Tests", () => {
 
   it('Before first hour', () => {
-    hours = new Hours(3598);
+    hours = new Hours(3599);
     actual = hours.asJson();
 
     expected = ["disabled", "disabled", "disabled", "disabled"];
@@ -14,7 +14,7 @@ describe("Hours Unit Tests", () => {
   });
   
   it('First hour', () => {
-    hours = new Hours(3599);
+    hours = new Hours(3600);
     actual = hours.asJson();
 
     expected = ["enabled", "disabled", "disabled", "disabled"];
@@ -23,7 +23,7 @@ describe("Hours Unit Tests", () => {
   });
   
   it('Second hour', () => {
-    hours = new Hours(3599 * 2);
+    hours = new Hours(3600 * 2);
     actual = hours.asJson();
 
     expected = ["enabled", "enabled", "disabled", "disabled"];
@@ -32,7 +32,7 @@ describe("Hours Unit Tests", () => {
   });
   
   it('Third hour', () => {
-    hours = new Hours(3599 * 3);
+    hours = new Hours(3600 * 3);
     actual = hours.asJson();
 
     expected = ["enabled", "enabled", "enabled", "disabled"];
@@ -41,10 +41,19 @@ describe("Hours Unit Tests", () => {
   });
   
   it('Fourth hour', () => {
-    hours = new Hours(3599 * 4);
+    hours = new Hours(3600 * 4);
     actual = hours.asJson();
 
     expected = ["enabled", "enabled", "enabled", "enabled"];
+
+    expect(expected).to.be.eql(actual);
+  });
+  
+  it('Fifth hour', () => {
+    hours = new Hours(3600 * 5);
+    actual = hours.asJson();
+
+    expected = ["disabled", "disabled", "disabled", "disabled"];
 
     expect(expected).to.be.eql(actual);
   });
