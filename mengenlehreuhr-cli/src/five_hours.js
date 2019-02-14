@@ -1,6 +1,6 @@
-class Hours {
+class FiveHours {
   constructor(ticks) {
-    const mod = (ticks / 3600) % 5
+    const mod = (ticks / 3600 * 4) % 5
     this.first = "disabled"
     if(mod >= 1) {
       this.first = "enabled"
@@ -27,4 +27,4 @@ class Hours {
   }
 };
 
-module.exports = Hours;
+module.exports = FiveHours;

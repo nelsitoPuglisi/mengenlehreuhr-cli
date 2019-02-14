@@ -1,6 +1,6 @@
 class Minutes {
   constructor(ticks) {
-    var mod = (ticks / 60) % 5
+    const mod = (ticks / 60) % 5
     this.first = "disabled"
     if(mod >= 1) {
       this.first = "enabled"
