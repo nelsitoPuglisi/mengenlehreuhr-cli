@@ -10,7 +10,7 @@ describe("Minutes Unit Tests", () => {
 
     expected = ["disabled", "disabled", "disabled", "disabled"];
 
-    expect(expected).to.be.eql(actual);
+    expect(actual).to.be.eql(expected);
   });
   
   it('First minute', () => {
@@ -19,7 +19,7 @@ describe("Minutes Unit Tests", () => {
 
     expected = ["enabled", "disabled", "disabled", "disabled"];
 
-    expect(expected).to.be.eql(actual);
+    expect(actual).to.be.eql(expected);
   });
   
   it('Before second minute', () => {
@@ -28,7 +28,7 @@ describe("Minutes Unit Tests", () => {
 
     expected = ["enabled", "disabled", "disabled", "disabled"];
 
-    expect(expected).to.be.eql(actual);
+    expect(actual).to.be.eql(expected);
   });
   
   it('Second minute', () => {
@@ -37,7 +37,7 @@ describe("Minutes Unit Tests", () => {
 
     expected = ["enabled", "enabled", "disabled", "disabled"];
 
-    expect(expected).to.be.eql(actual);
+    expect(actual).to.be.eql(expected);
   });
   
   it('Third minute', () => {
@@ -46,7 +46,7 @@ describe("Minutes Unit Tests", () => {
 
     expected = ["enabled", "enabled", "enabled", "disabled"];
 
-    expect(expected).to.be.eql(actual);
+    expect(actual).to.be.eql(expected);
   });
   
   it('Fourth minute', () => {
@@ -55,7 +55,7 @@ describe("Minutes Unit Tests", () => {
 
     expected = ["enabled", "enabled", "enabled", "enabled"];
 
-    expect(expected).to.be.eql(actual);
+    expect(actual).to.be.eql(expected);
   });
 
 
@@ -66,7 +66,7 @@ describe("Minutes Unit Tests", () => {
 
     expected = ["disabled", "disabled", "disabled", "disabled"];
 
-    expect(expected).to.be.eql(actual);
+    expect(actual).to.be.eql(expected);
   });
 
 

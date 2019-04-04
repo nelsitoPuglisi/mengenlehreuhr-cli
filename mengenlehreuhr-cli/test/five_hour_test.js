@@ -4,13 +4,13 @@ const FiveHours = require('../src/five_hours.js');
 
 describe("FiveHours Unit Tests", () => {
 
-  it('Before fifth hour', () => {
+  it.only('Before fifth hour', () => {
     hours = new FiveHours(3599);
     actual = hours.asJson();
 
     expected = ["disabled", "disabled", "disabled", "disabled"];
 
-    expect(expected).to.be.eql(actual);
+    expect(actual).to.be.eql(expected);
   });
   
   it('Fifth hour', () => {
@@ -19,7 +19,7 @@ describe("FiveHours Unit Tests", () => {
 
     expected = ["enabled", "disabled", "disabled", "disabled"];
 
-    expect(expected).to.be.eql(actual);
+    expect(actual).to.be.eql(expected);
   });
   
   it('Tenth hour', () => {
@@ -28,7 +28,7 @@ describe("FiveHours Unit Tests", () => {
 
     expected = ["enabled", "enabled", "disabled", "disabled"];
 
-    expect(expected).to.be.eql(actual);
+    expect(actual).to.be.eql(expected);
   });
   
   it('Fifteenth hour', () => {
@@ -37,7 +37,7 @@ describe("FiveHours Unit Tests", () => {
 
     expected = ["enabled", "enabled", "enabled", "disabled"];
 
-    expect(expected).to.be.eql(actual);
+    expect(actual).to.be.eql(expected);
   });
   
   it('Twetieth hour', () => {
@@ -46,6 +46,6 @@ describe("FiveHours Unit Tests", () => {
 
     expected = ["enabled", "enabled", "enabled", "enabled"];
 
-    expect(expected).to.be.eql(actual);
+    expect(actual).to.be.eql(expected);
   });
 });

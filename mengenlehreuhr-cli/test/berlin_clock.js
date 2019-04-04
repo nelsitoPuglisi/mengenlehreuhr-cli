@@ -30,7 +30,7 @@ describe("Berlin Clock", () => {
             minutes: ["disabled", "disabled", "disabled", "disabled"]
         };
 
-        expect(expected).to.be.eql(actual);
+        expect(actual).to.be.eql(expected);
 
     });
 
@@ -61,7 +61,7 @@ describe("Berlin Clock", () => {
             minutes: ["disabled", "disabled", "disabled", "disabled"]
         };
 
-        expect(expected).to.be.eql(actual);
+        expect(actual).to.be.eql(expected);
 
     });
 
@@ -92,7 +92,7 @@ describe("Berlin Clock", () => {
             minutes: ["enabled", "disabled", "disabled", "disabled"]
         };
 
-        expect(expected).to.be.eql(actual);
+        expect(actual).to.be.eql(expected);
 
     });
 
@@ -123,7 +123,7 @@ describe("Berlin Clock", () => {
             minutes: ["disabled", "disabled", "disabled", "disabled"]
         };
 
-        expect(expected).to.be.eql(actual);
+        expect(actual).to.be.eql(expected);
 
     });
 

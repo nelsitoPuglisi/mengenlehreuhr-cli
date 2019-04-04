@@ -1,8 +1,10 @@
 class FiveHours {
   constructor(ticks) {
-    const mod = (ticks / 3600 * 4) % 5
+    console.log(ticks / 3600 * 5)
+    const mod = Math.floor((ticks / 3600 * 5) % 5)
     this.first = "disabled"
     if(mod >= 1) {
+      console.log(mod)
       this.first = "enabled"
     }
 
