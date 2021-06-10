@@ -1,30 +1,28 @@
 class FiveHours {
   constructor(ticks) {
-    console.log(ticks / 3600 * 5)
-    const mod = Math.floor((ticks / 3600 * 5) % 5)
-    this.first = "disabled"
-    if(mod >= 1) {
-      console.log(mod)
-      this.first = "enabled"
+    const mod = ticks % 5
+    this.first = "B"
+    if(ticks >= 5) {
+      this.first = "R"
     }
 
-    this.second = "disabled"
-    if(mod >= 2) {
-      this.second = "enabled"
+    this.second = "B"
+    if(ticks >= 10) {
+      this.second = "R"
     }
 
-    this.third = "disabled"
-    if(mod >= 3) {
-      this.third = "enabled"
+    this.third = "B"
+    if(ticks >= 15) {
+      this.third = "R"
     }
 
-    this.fourth = "disabled"
-    if(mod >= 4) {
-      this.fourth = "enabled"
+    this.fourth = "B"
+    if(ticks >= 20) {
+      this.fourth = "R"
     }
   }
 
-  asJson() {
+  toRow() {
     return [this.first, this.second, this.third, this.fourth]
   }
 };

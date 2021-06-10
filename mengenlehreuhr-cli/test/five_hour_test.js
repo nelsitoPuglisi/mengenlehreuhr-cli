@@ -4,47 +4,47 @@ const FiveHours = require('../src/five_hours.js');
 
 describe("FiveHours Unit Tests", () => {
 
-  it.only('Before fifth hour', () => {
-    hours = new FiveHours(3599);
-    actual = hours.asJson();
+  it('Before fifth hour', () => {
+    hours = new FiveHours(04);//Between 00:00:00 and 04:59:59
+    actual = hours.toRow();
 
-    expected = ["disabled", "disabled", "disabled", "disabled"];
+    expected = ["B", "B", "B", "B"];
 
     expect(actual).to.be.eql(expected);
   });
   
   it('Fifth hour', () => {
-    hours = new FiveHours(3600);
-    actual = hours.asJson();
+    hours = new FiveHours(06);//Between 05:00:00 and 09:59:59
+    actual = hours.toRow();
 
-    expected = ["enabled", "disabled", "disabled", "disabled"];
+    expected = ["R", "B", "B", "B"];
 
     expect(actual).to.be.eql(expected);
   });
   
   it('Tenth hour', () => {
-    hours = new FiveHours(3600 * 2);
-    actual = hours.asJson();
+    hours = new FiveHours(13);//Between 10:00:00 and 14:59:59
+    actual = hours.toRow();
 
-    expected = ["enabled", "enabled", "disabled", "disabled"];
+    expected = ["R", "R", "B", "B"];
 
     expect(actual).to.be.eql(expected);
   });
   
   it('Fifteenth hour', () => {
-    hours = new FiveHours(3600 * 3);
-    actual = hours.asJson();
+    hours = new FiveHours(17);//Between 15:00:00 and 19:59:59
+    actual = hours.toRow();
 
-    expected = ["enabled", "enabled", "enabled", "disabled"];
+    expected = ["R", "R", "R", "B"];
 
     expect(actual).to.be.eql(expected);
   });
   
   it('Twetieth hour', () => {
-    hours = new FiveHours(3600 * 4);
-    actual = hours.asJson();
+    hours = new FiveHours(22);//Between 20:00:00 and 23:59:59
+    actual = hours.toRow();
 
-    expected = ["enabled", "enabled", "enabled", "enabled"];
+    expected = ["R", "R", "R", "R"];
 
     expect(actual).to.be.eql(expected);
   });

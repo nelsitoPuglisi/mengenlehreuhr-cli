@@ -4,70 +4,51 @@ const Minute = require('../src/minutes.js');
 
 describe("Minutes Unit Tests", () => {
 
-  it('Before first minute', () => {
-    hours = new Minute(59);
-    actual = hours.asJson();
+  it('No minutes to show: 0', () => {
+    ticks = 0 //from 12:00:35
+    minutes = new Minute(ticks)
+    actual = minutes.toRow()
+    expected = ['B', 'B', 'B', 'B']
+    expect(actual).to.be.eql(expected)
+  })
 
-    expected = ["disabled", "disabled", "disabled", "disabled"];
+  it('No minutes to show: 5', () => {
+    ticks = 35 //from 12:35:35
+    minutes = new Minute(ticks)
+    actual = minutes.toRow()
+    expected = ['B', 'B', 'B', 'B']
+    expect(actual).to.be.eql(expected)
+  })
 
-    expect(actual).to.be.eql(expected);
-  });
-  
   it('First minute', () => {
-    hours = new Minute(60);
-    actual = hours.asJson();
-
-    expected = ["enabled", "disabled", "disabled", "disabled"];
-
-    expect(actual).to.be.eql(expected);
-  });
-  
-  it('Before second minute', () => {
-    hours = new Minute(119);
-    actual = hours.asJson();
-
-    expected = ["enabled", "disabled", "disabled", "disabled"];
-
-    expect(actual).to.be.eql(expected);
+    ticks = 21 //from 12:21:35
+    minutes = new Minute(ticks)
+    actual = minutes.toRow()
+    expected = ['Y', 'B', 'B', 'B']
+    expect(actual).to.be.eql(expected)
   });
   
   it('Second minute', () => {
-    hours = new Minute(120);
-    actual = hours.asJson();
-
-    expected = ["enabled", "enabled", "disabled", "disabled"];
-
-    expect(actual).to.be.eql(expected);
+    ticks = 27 //from 12:27:35
+    minutes = new Minute(ticks)
+    actual = minutes.toRow()
+    expected = ['Y', 'Y', 'B', 'B']
+    expect(actual).to.be.eql(expected)
   });
   
   it('Third minute', () => {
-    hours = new Minute(180);
-    actual = hours.asJson();
-
-    expected = ["enabled", "enabled", "enabled", "disabled"];
-
-    expect(actual).to.be.eql(expected);
+    ticks = 23 //from 12:23:35
+    minutes = new Minute(ticks)
+    actual = minutes.toRow()
+    expected = ['Y', 'Y', 'Y', 'B']
+    expect(actual).to.be.eql(expected)
   });
   
   it('Fourth minute', () => {
-    hours = new Minute(240);
-    actual = hours.asJson();
-
-    expected = ["enabled", "enabled", "enabled", "enabled"];
-
-    expect(actual).to.be.eql(expected);
+    ticks = 29 //from 12:29:35
+    minutes = new Minute(ticks)
+    actual = minutes.toRow()
+    expected = ['Y', 'Y', 'Y', 'Y']
+    expect(actual).to.be.eql(expected)
   });
-
-
-  
-  it('Fifth minute', () => {
-    hours = new Minute(300);
-    actual = hours.asJson();
-
-    expected = ["disabled", "disabled", "disabled", "disabled"];
-
-    expect(actual).to.be.eql(expected);
-  });
-
-
 });

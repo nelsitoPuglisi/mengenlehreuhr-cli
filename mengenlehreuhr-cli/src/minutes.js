@@ -1,28 +1,28 @@
 class Minutes {
   constructor(ticks) {
-    const mod = (ticks / 60) % 5
-    this.first = "disabled"
+    const mod = ticks % 5
+    this.first = "B"
     if(mod >= 1) {
-      this.first = "enabled"
+      this.first = "Y"
     }
 
-    this.second = "disabled"
+    this.second = "B"
     if(mod >= 2) {
-      this.second = "enabled"
+      this.second = "Y"
     }
 
-    this.third = "disabled"
+    this.third = "B"
     if(mod >= 3) {
-      this.third = "enabled"
+      this.third = "Y"
     }
 
-    this.fourth = "disabled"
+    this.fourth = "B"
     if(mod >= 4) {
-      this.fourth = "enabled"
+      this.fourth = "Y"
     }
   }
 
-  asJson() {
+  toRow() {
     return [this.first, this.second, this.third, this.fourth]
   }
 };
