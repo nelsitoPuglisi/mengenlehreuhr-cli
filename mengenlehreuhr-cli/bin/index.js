@@ -12,7 +12,7 @@ const rl = readline.createInterface({
     output: process.stdout
 });
 
-rl.question(chalk.blue.bold("Press any key to exit "), function(name) {
+rl.question(chalk.blue.bold("Press enter to exit "), function(name) {
   rl.close();
 });
 
