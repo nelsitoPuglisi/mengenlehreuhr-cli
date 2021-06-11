@@ -10,8 +10,10 @@ class BerlinClock {
         this.minutes = new Minutes(time.split(':')[1])
         this.seconds = time.split(':')[2]
     }
+    
+    
 
-    toRow() {
+    asJson() {        
         return {
             second: (this.seconds % 2 == 0) ? 'B': 'Y',
             five_hours: this.fiveHours.toRow(),

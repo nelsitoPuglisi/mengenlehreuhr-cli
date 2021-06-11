@@ -7,7 +7,7 @@ describe("Berlin Clock", () => {
 
     it('Five hours', () => {
         clock = new BerlinClock('16:52:33');
-        actual = clock.toRow()
+        actual = clock.asJson()
         expected = {
             second: "Y",
             five_hours: ['R', 'R', 'R', 'B'],

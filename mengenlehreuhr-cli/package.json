@@ -2,9 +2,9 @@
   "name": "mengenlehreuhr-cli",
   "version": "1.0.0",
   "description": "A Mengenlehreuhr clock for the terminal",
-  "main": "mengenlehreuhr.js",
+  "main": "bin/index.js",
   "bin": {
-    "mengenlehreuhr": "mengenlehreuhr.js"
+    "mengenlehreuhr": "./bin/index.js"
   },
   "scripts": {
     "test": "mocha"
@@ -12,6 +12,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "ansi-escapes": "^3.2.0",
+    "boxen": "^5.0.1",
     "chai": "^4.2.0",
     "chalk": "^2.4.1",
     "eslint": "^5.11.1",
